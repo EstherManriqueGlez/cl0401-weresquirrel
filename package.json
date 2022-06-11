@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EstherManriqueGlez/cl0401-weresquirrel/issues"
   },
-  "homepage": "https://github.com/EstherManriqueGlez/cl0401-weresquirrel#readme"
+  "homepage": "https://github.com/EstherManriqueGlez/cl0401-weresquirrel#readme",
+  "dependencies": {
+    "jasmine": "^4.2.0"
+  }
 }
