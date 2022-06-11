@@ -17,7 +17,7 @@
     "url": "https://github.com/EstherManriqueGlez/cl0401-weresquirrel/issues"
   },
   "homepage": "https://github.com/EstherManriqueGlez/cl0401-weresquirrel#readme",
-  "dependencies": {
+  "devDependencies": {
     "jasmine": "^4.2.0"
   }
 }
