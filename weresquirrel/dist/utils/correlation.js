@@ -1,6 +1,8 @@
 import JOURNAL from './JOURNAL.js';
 function addEntry(events, squirrel) {
-    JOURNAL.push({ events, squirrel });
+    let journal = JOURNAL;
+    journal.push({ events, squirrel });
+    return journal;
 }
 function phi([n00, n01, n10, n11]) {
     return (n11 * n00 - n10 * n01) /
