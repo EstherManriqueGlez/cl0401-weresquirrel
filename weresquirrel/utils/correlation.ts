@@ -1,7 +1,9 @@
 import JOURNAL from './JOURNAL.js'
 
 function addEntry(events: string[], squirrel: boolean) {
-    JOURNAL.push({events, squirrel});
+    let journal = JOURNAL;
+    journal.push({events, squirrel});
+    return journal;
   }
   
   function phi([n00, n01, n10, n11]: number[]): number {

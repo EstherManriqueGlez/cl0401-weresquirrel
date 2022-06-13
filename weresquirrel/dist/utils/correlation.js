@@ -1,14 +1,14 @@
 import JOURNAL from './JOURNAL.js';
 function addEntry(events, squirrel) {
-    JOURNAL.push({ events, squirrel });
+    let journal = JOURNAL;
+    journal.push({ events, squirrel });
+    return journal;
 }
-
 function phi([n00, n01, n10, n11]) {
     return (n11 * n00 - n10 * n01) /
         Math.sqrt((n10 + n11) * (n00 + n01) *
             (n01 + n11) * (n00 + n10));
 }
-
 function tableFor(event, journal) {
     let table = [0, 0, 0, 0];
     for (let entry of journal) {
@@ -21,7 +21,6 @@ function tableFor(event, journal) {
     }
     return table;
 }
-
 function journalEvents(journal) {
     let events = [];
     for (let entry of journal)
@@ -29,8 +28,5 @@ function journalEvents(journal) {
             if (!events.includes(event))
                 events.push(event);
     return events;
-};
-
-console.log(journalEvents(JOURNAL));
-
+}
 export { addEntry, phi, tableFor, journalEvents };
